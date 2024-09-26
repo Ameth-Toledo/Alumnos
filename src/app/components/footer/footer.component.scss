@@ -1,0 +1,49 @@
+.footer-class {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #4a90e2; 
+    border-top: 3px solid #00aaff;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+    color: #ffffff;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1000px;
+}
+
+.footer-text {
+    font-family: "Merriweather", serif;
+    font-size: 18px;
+    margin: 0;
+}
+
+.footer-icons {
+    display: flex;
+    gap: 20px;
+}
+
+.icon-link {
+    color: #ffffff;
+    font-size: 24px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.icon-link:hover {
+    color: #00aaff;
+}
+
+.icon-link i {
+    transition: transform 0.3s ease;
+}
+
+.icon-link:hover i {
+    transform: scale(1.1); 
+}

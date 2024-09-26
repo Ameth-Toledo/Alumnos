@@ -1,0 +1,33 @@
+.card-equipos {
+    background-color: #D9D9D9;
+    width: 500px;
+    height: auto; 
+    border-radius: 30px;
+    padding: 20px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center; 
+}
+
+.card-equipos:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
+    transform: translateY(-10px); 
+    background-color: #cfcfcf; 
+}
+
+.name-equipo {
+    font-size: 28px; 
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.names-equipo {
+    font-size: 18px;
+    color: #666;
+    margin: 0;
+}
