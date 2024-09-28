@@ -1,0 +1,29 @@
+<form action="" class="form-registro">
+    <label for="nombre" class="label-registro">Ingrese su nombre</label>
+    <input type="text" id="nombre" class="input-registro">
+    
+    <fieldset class="fieldset-registro">
+        <legend class="legend-registro">Seleccione su equipo:</legend>
+        
+        <div class="radio-group-registro">
+            <input type="radio" id="huey" name="drone" value="huey" class="radio-input-registro"
+              [checked]="estaSeleccionado('huey')" 
+              [disabled]="estaDeshabilitado('huey')"
+            />
+            <label for="huey" class="radio-label-registro">Equipo: 1</label>
+        </div>
+        
+        <div class="radio-group-registro">
+            <input type="radio" id="dewey" name="drone" value="dewey" class="radio-input-registro"
+              [checked]="estaSeleccionado('dewey')" 
+              [disabled]="estaDeshabilitado('dewey')"
+            />
+            <label for="dewey" class="radio-label-registro">Equipo: 2</label>
+        </div>
+        
+        <button type="button" class="btn-select-registro" (click)="elejirEquipo()">¡Selecciona uno por mí!</button>
+        <p class="description-registro">Si quieres que el sistema elija un equipo por ti, presiona el botón azul por favor.</p>
+    </fieldset>
+    
+    <button type="submit" class="btn-submit-registro">Registrar</button>
+</form>

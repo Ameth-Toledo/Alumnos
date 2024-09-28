@@ -1,4 +1,7 @@
 export interface Alumnos {
     id : number;
-    names : string [ ];
+    names : string;
+    equipo : string [
+        
+    ];
 }

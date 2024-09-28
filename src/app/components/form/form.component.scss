@@ -1,0 +1,100 @@
+.form-registro {
+    font-family: "Merriweather", serif;
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 30px;
+    border-radius: 8px;
+    background-color: #f5f5f5;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 2px solid #4a90e2;
+}
+
+.label-registro {
+    display: block;
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.input-registro {
+    width: 100%;
+    padding: 10px 0; 
+    font-size: 16px;
+    border: none;
+    border-bottom: 2px solid #ccc; 
+    margin-bottom: 25px;
+    outline: none; 
+    transition: border-color 0.3s ease;
+    font-family: "Merriweather", serif;
+}
+
+.input-registro:focus {
+    border-bottom: 2px solid #00aaff; 
+}
+
+.fieldset-registro {
+    border: none; 
+    padding: 0;
+    margin-bottom: 25px;
+}
+
+.legend-registro {
+    font-size: 20px;
+    color: #4a90e2;
+    padding: 0 10px;
+    font-weight: bold;
+}
+
+.radio-group-registro {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.radio-input-registro {
+    margin-right: 10px;
+}
+
+.radio-label-registro {
+    font-size: 18px;
+    color: #333;
+}
+
+.btn-select-registro {
+    background-color: #00aaff;
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    margin-top: 15px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-select-registro:hover {
+    background-color: #007acc;
+}
+
+.description-registro {
+    font-size: 16px;
+    color: #555;
+    margin-top: 15px;
+}
+
+.btn-submit-registro {
+    background-color: #4a90e2;
+    color: #fff;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+.btn-submit-registro:hover {
+    background-color: #3a70b2;
+}
