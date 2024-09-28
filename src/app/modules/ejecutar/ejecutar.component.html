@@ -1,9 +1,17 @@
 <app-header></app-header>
-<app-card-equipos 
-    name="Equipo 1">
-</app-card-equipos>
-<app-card-equipos 
-    name="Equipo 2">
-</app-card-equipos>
-<app-temporizador></app-temporizador>
+
+<button class="btn-ejecutar" (click)="ejecutar()">
+   <i class="fas fa-play"></i>Ejecutar
+</button>
+
+<div class="container-cards">
+    <app-card-equipos equipo="'Equipo 1'" [estudiantes]="equipo1"></app-card-equipos>
+    <div class="temporizador-wrapper">
+        <h1 class="instruccion">Tendrás 3 minutos para responder</h1>
+        <app-temporizador></app-temporizador>
+    </div>
+    <app-card-equipos equipo="'Equipo 2'" [estudiantes]="equipo2"></app-card-equipos>
+</div>
+
+<app-card-historial></app-card-historial>
 <app-footer></app-footer>

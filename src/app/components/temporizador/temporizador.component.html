@@ -1,10 +1,10 @@
 <div class="temporizador">
     <p class="reloj">{{ minutos | number: '2.0' }}:{{ segundos | number: '2.0' }}</p>
-    <button class="comenzar-btn" (click)="iniciarTemporizador()">Comenzar </button>
+    <button class="comenzar-btn" (click)="iniciarTemporizador()">{{ cambiarTextButton ? 'Reiniciar' : 'Comenzar' }}</button>
     
     <div class="control-buttons">
-        <button class="detener-btn">Detener</button>
-        <button class="reanudar-btn">Reanudar</button>
+        <button class="detener-btn" (click)="detenerTemporizador()">Detener</button>
+        <button class="reanudar-btn" (click)="reanudarTemporizador()">Reanudar</button>
     </div>
 </div>
 

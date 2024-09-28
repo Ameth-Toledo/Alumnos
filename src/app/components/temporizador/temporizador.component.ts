@@ -16,7 +16,8 @@ export class TemporizadorComponent implements OnInit {
   segundos : number = 0;
   temporizadorInterval : any;
   alertaVisible : boolean = false;
-  
+  cambiarTextButton :  boolean = false;
+
   ngOnInit(): void {
 
   }
@@ -26,6 +27,7 @@ export class TemporizadorComponent implements OnInit {
       clearInterval(this.temporizadorInterval)
     } 
 
+    this.cambiarTextButton = true;
     this.tiempoRestante =180;
     this.temporizadorInterval = setInterval(() => {
       if (this.tiempoRestante > 0) {
@@ -39,8 +41,37 @@ export class TemporizadorComponent implements OnInit {
       } else {
         clearInterval(this.temporizadorInterval)
         this.mostrarAlert();
+        this.cambiarTextButton = false;
       }
     }, 1000);
+  }
+
+  detenerTemporizador() {
+    if (this.temporizadorInterval) {
+      clearInterval(this.temporizadorInterval);
+      this.temporizadorInterval = null
+      this.cambiarTextButton = false;
+    }
+  }
+
+  reanudarTemporizador() {
+    if (this.temporizadorInterval === null && this.tiempoRestante > 0) {
+      this.temporizadorInterval = setInterval(() => {
+        if (this.tiempoRestante > 0) {
+          this.tiempoRestante --;
+          this.minutos = Math.floor(this.tiempoRestante / 60);
+          this.segundos = this.tiempoRestante % 60;
+
+          if (this.tiempoRestante === 10) {
+            this.AlertPush();
+          }
+        } else {
+          clearInterval(this.temporizadorInterval);
+          this.mostrarAlert();
+          this.cambiarTextButton = true;
+        }
+      }, 1000);
+    }
   }
 
   mostrarAlert() {
